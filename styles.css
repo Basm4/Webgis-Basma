@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Style Kerangka Secara Umum */
+html {
+scroll-behavior: smooth;
+font-family: 'Poppins', sans-serif;
+caret-color: transparent;
+}
+body {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+background: #111222;
+}
+/* Seluruh Komponen Pada Header */
+.logo {
+display: flex; /* Use flexbox */
+align-items: center; /* Align items vertically */
+}
+.logo img {
+width: 80px; /* Set the width of the logo */
+margin-right: 50px; /* Add some space between the image and title */
+}
+header nav {
+display: flex;
+justify-content: flex-start;
+}
+header nav a {
+color:#E8EBD2;
+text-decoration:none;
+font-weight: bold;
+margin: 15px;
+}
+/* Styling navbar*/
+#navbar {
+background-color: #1b8107c1; /* Soft blue color without transparency */
+color: #E8EBD2;
+padding: 20px 0;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 999;
+border-bottom: 2px solid #333;
+font-family: 'Poppins', sans-serif;
+transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+/* styling balok navbar */
+.container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1800px;
+margin: 0 auto;
+padding: 0 20px;
+}
+/* styling judul navbar */
+.logo h1 {
+margin: 0;
+font-size: 30px;
+font-weight: bold;
+}
+/* styling animasi */
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+nav ul li {
+display: inline;
+margin-left: 20px;
+}
+nav ul li:first-child {
+margin-left: 0;
+}
+nav ul li a {
+color: #E8EBD2;
+text-decoration: none;
+font-size: 20px;
+position: relative; /* Needed for pseudo-element positioning */
+}
+nav ul li a::before {
+content: '';
+position: absolute;
+top: -7px; /* Move the pseudo-element up by half of the hover size */
+left: -7px; /* Move the pseudo-element left by half of the hover size */
+width: calc(100% + 14px); /* Expand the width by 14 pixels (7px on each side) */
+height: calc(100% + 14px); /* Expand the height by 14 pixels (7px on each side) */
+background-color: #1b8107; /* Background color without transparency */
+border-radius: 10px; /* Rounded corners */
+z-index: -1; /* Behind the text */
+transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+nav ul li a:hover::before {
+background-color: #E8EBD2; /* Adjusted hover color without transparency */
+}
+nav ul li a:hover {
+color: #1b8107; /* Adjusted font color to match hover color */
+}
+/* styling hero section (gambar, tulisan judul) */
+.hero-section {
+margin-top: 0px; /* Adjust margin to make room for fixed navbar */
+background-image:
+url('https://2.bp.blogspot.com/-w3CWINUinVw/Ux0xRPXR55I/AAAAAAAAAOw/pnsupRyiT10/s1600/Gunung+Merapi+Sleman+Yogyakarta+Jawa+Tengah.jpg');
+/* Replace'city-background.jpg' with your image */
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+justify-content: left;
+padding: 0 100px;
+color: white;
+}
+/* tulisan di hero section */
+.hero-content {
+margin-top: 500px;
+max-width: 1800px;
+color: #E8EBD2;
+}
+.hero-content h1{
+font-size: 40px;
+}
+.hero-content p{
+font-size: 20px;
+margin-left: 20px;
+}
+/* Map Section */
+#map-section{
+background-color: #db3636;
+width: 100%;
+height: 80px;
+}
+.slider {
+overflow: hidden;
+} 
+.slide-track {
+display: flex;
+animation: scroll 25s linear infinite;
+}
+.slide {
+width: 100%;
+flex-shrink: 0;
+flex-basis: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #E8EBD2;
+}
+@keyframes scroll {
+0% {
+   transform: translateX(0);
+}
+100% {
+transform: translateX(-100%);
+}
+}
+.slide p{
+text-align: center;
+margin-top: 20px;
+font-size: 28px;
+margin-bottom: 20px;
+letter-spacing: 5px;
+font-weight: bold;
+}
+#map{
+width: 90%;
+height: 800px;
+background-color: lightgray;
+margin: 40px auto; /* Adjusted margin for space */
+border: 2px solid #ccc; /* Add a border with a subtle color */
+border-radius: 10px;
+overflow: hidden;
+position: relative; /* Relative positioning for child elements */
+z-index: 98; /* Jangan lupa di set 98 agar peta bisa interaktif */
+} 
+/* Data Section Styles */x
+#data-section {
+background-color: #f9f9f9;
+padding: 60px 0;
+}
+#data-section .container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+justify-content: flex-start;
+}
+#data-section h2 {
+text-align: center;
+font-size: 36px;
+margin-bottom: 40px;
+clear: both;
+color: #E8EBD2;
+width: auto;
+}
+.column {
+flex: 0 0 calc(33.33% - 20px);
+max-width: calc(33.33% - 20px);
+margin-bottom: 40px;
+justify-content: flex-start;
+}
+.data-item {
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+margin: auto 10px;
+}
+.data-item img {
+width: 100%;
+height: 100%;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.description {
+padding: 20px;
+height: 500px;
+}
+.description h3 {
+margin-top: 0;
+font-size: 24px;
+}
+.description p {
+color: #555;
+font-size: 16px;
+}
+/* Author Section */
+#author-section {
+background-color: #E8EBD2;
+padding: 40px 20px;
+font-family: 'Montserrat', sans-serif;
+text-align: justify;
+}
+.author-content {
+max-width: 800px;
+margin: 0 auto;
+}
+.author-content h2 {
+text-align: center;
+}
+.author-name {
+text-align: center; /* Center-align only the author's name */
+}
+.profile-picture {
+height: 100px;
+width: auto;
+border-radius: 20%;
+margin: 10px auto 10px; /* Center the picture horizontally and add margin at the bottom */
+display: block; /* Ensure it behaves as a block element */
+}
+#footer {
+background-color: #1b8107c1;
+color: #E8EBD2;
+text-align: center;
+padding: 20px;
+flex-shrink: 0;
+}
+#footer {
+background-color: #1b8107c1;
+color: #E8EBD2;
+text-align: center;
+padding: 20px;
+flex-shrink: 0;
+}
+.legend {
+padding: 6px 8px;
+background-color: rgba(255,255,255,0.8);
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+border-radius: 5px;
+}
+.legend div {
+width: 30px;
+height: 15px;
+float: left;
+margin-right: 8px;
+opacity: 0.7;
+}
+div.legend.leaflet-control br {
+clear: both;
+}    
